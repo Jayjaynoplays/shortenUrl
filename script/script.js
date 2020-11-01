@@ -3,7 +3,7 @@ var outputBox = document.getElementById("outUrl");
 var outputFrame = document.getElementById("outputFrame");
 var btnIn = document.getElementById("btn-in");
 
-    inputBox.addEventListener("keyup", function(keypress) {
+inputBox.addEventListener("keyup", function(keypress) {
         if (keypress.keyCode === 13) {
             keypress.preventDefault();
             btnIn.click();
