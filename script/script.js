@@ -3,7 +3,7 @@ var outputBox = document.getElementById("outUrl");
 var outputFrame = document.getElementById("outputFrame");
 var btnIn = document.getElementById("btn-in");
 
-    inputBox.addEventListener("keyup", function(keypress) {
+inputBox.addEventListener("keyup", function(keypress) {
         if (keypress.keyCode === 13) {
             keypress.preventDefault();
             btnIn.click();
@@ -25,7 +25,7 @@ btnIn.addEventListener('click',function(){
     });
 
 function fetchData(){
-    var slug ='';
+    //var slug ='';
 
     window.fetch("https://dsc-dut.herokuapp.com/url", {
     method:'POST',
@@ -35,11 +35,10 @@ function fetchData(){
     }
 })
     .then(res => res.json())
-    .then(response => slug = response.slug)
-    .then(response =>outputBox.value = window.location.href + slug)
+    //.then(response => slug = response.slug)
+    .then(response =>outputBox.value = window.location.href + response.slug)
     .catch(error => console.error('Error:', error))
 }
-
 
 function checkNull(str){
     str = str.trim();
