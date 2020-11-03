@@ -25,8 +25,6 @@ btnIn.addEventListener('click',function(){
     });
 
 function fetchData(){
-    //var slug ='';
-
     window.fetch("https://dsc-dut.herokuapp.com/url", {
     method:'POST',
     body: JSON.stringify({"url": inputBox.value}),
@@ -35,7 +33,6 @@ function fetchData(){
     }
 })
     .then(res => res.json())
-    //.then(response => slug = response.slug)
     .then(response =>outputBox.value = window.location.href + response.slug)
     .catch(error => console.error('Error:', error))
 }
