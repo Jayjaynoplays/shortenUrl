@@ -14,13 +14,8 @@ btnIn.addEventListener('click',function(){
         if(!checkNull(inputBox.value)){
             alert("Please enter the correct URL!")
         }else{
-            if(outputFrame.style.display == "none"){
-                outputFrame.style.display = "block";
-                fetchData();
-            }else{
-                outputFrame.style.display = "none";
-                window.location.reload();
-            }            
+            outputBox.value="Gimme a sec..."
+            fetchData();           
         }
     });
 

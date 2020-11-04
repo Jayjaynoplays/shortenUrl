@@ -17,11 +17,11 @@
     
     <div class="center">
         <h2 class="slogan">Shorter URL, less pain for your eyes</h2>
-        <input type="text" placeholder="Gimme your URL..." class="inputbox" id="inUrl">
+        <input type="text" placeholder="Gimme your URL..." class="inputbox" id="inUrl" onfocus="this.value=''">
         <button title="Click to shorten url" class="btn-in" id="btn-in" >Shorten It!</button>  
-        <div style="display: none; margin-top: 30px;" id="outputFrame">
+        <div style="display: block; margin-top: 30px;" id="outputFrame">
             <div>
-                <input class="inputbox" id="outUrl" placeholder="Gimme a sec..."> </input>
+                <input class="inputbox" id="outUrl" placeholder="Your shorten URL here"> </input>
             </div>
             <div style="margin-right: -570px;margin-top:-63px">
                 <button title="copy" class="btn-copy" title="Click to copy"><i class="fa fa-clone fa-2x" onclick="copy()"></i></button>
